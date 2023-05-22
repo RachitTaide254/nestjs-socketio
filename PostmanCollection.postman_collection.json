@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "1546ea18-7d35-42a5-a97a-4d22263e6cc5",
+		"name": "PostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10726592"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/admin/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"1sam@gamil.com\",\r\n    \"password\":\"1asd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/admin/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sam@gamil.com\",\r\n    \"password\":\"asd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/createBlog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUBnYW1pbC5jb20iLCJpZCI6IjY0NmIwMGU1NTdkMjljNDA4YzE3NGQ2YyIsImlhdCI6MTY4NDczNDE4OSwiZXhwIjoxNjg0NzM3Nzg5fQ.Q2Smcj_Vj8ANHwlFZ66vfnPptSs7ka6WLzHuE-ogotU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\":\"Travel to Spain\",\r\n    \"description\":\"Beautiful country\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/createBlog",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"createBlog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/blog/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUBnYW1pbC5jb20iLCJpZCI6IjY0NmIwMGU1NTdkMjljNDA4YzE3NGQ2YyIsImlhdCI6MTY4NDczNDE4OSwiZXhwIjoxNjg0NzM3Nzg5fQ.Q2Smcj_Vj8ANHwlFZ66vfnPptSs7ka6WLzHuE-ogotU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/blog/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"blog",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "646633c37d8f562e0d06634b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/blog/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUBnYW1pbC5jb20iLCJpZCI6IjY0NjYyYzU1ZWUzMTk0ZDVlOTI2YjllZiIsImlhdCI6MTY4NDQxNzcxMywiZXhwIjoxNjg0NDIxMzEzfQ.LZWCKclLWleDt0yS2JRvERCGyUNdWjTHgHEnSswkR5o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/blog/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"blog",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "646633c37d8f562e0d06634b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/blogs/:page/:limit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUBnYW1pbC5jb20iLCJpZCI6IjY0NjYyYzU1ZWUzMTk0ZDVlOTI2YjllZiIsImlhdCI6MTY4NDczMjM0OCwiZXhwIjoxNjg0NzM1OTQ4fQ.b9Jx78_T-lmGo1fKPk_mS67FNtEQsYUEPjU-fp4VeEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/blogs/:page/:limit",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"blogs",
+						":page",
+						":limit"
+					],
+					"variable": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/editblog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUBnYW1pbC5jb20iLCJpZCI6IjY0NjYyYzU1ZWUzMTk0ZDVlOTI2YjllZiIsImlhdCI6MTY4NDQyMTM3MSwiZXhwIjoxNjg0NDI0OTcxfQ.JutrypIxMlQo1TzKXRqX4_eiG4J1cgf1ZO8U50MAYeE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6466360f58debf09fb81c904\",\r\n    \"Title\":\"Travel to oSpain\",\r\n    \"description\":\"Beautiful country\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/editblog",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"editblog"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
